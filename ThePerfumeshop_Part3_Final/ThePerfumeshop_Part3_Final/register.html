@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Validate a demo customer registration form for The Perfume Shop. No passwords are stored by this static academic website.">
+  <meta name="keywords" content="perfume shop register, customer account, fragrance store signup">
+  <meta name="author" content="The Perfume Shop">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#100d0f">
+  <link rel="canonical" href="https://www.theperfumeshop.co.za/register.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Create Demo Account | The Perfume Shop">
+  <meta property="og:description" content="Validate a demo customer registration form for The Perfume Shop. No passwords are stored by this static academic website.">
+  <meta property="og:url" content="https://www.theperfumeshop.co.za/register.html">
+  <meta property="og:image" content="https://www.theperfumeshop.co.za/images/perfume-shop-collection.jpg">
+  <title>Create Demo Account | The Perfume Shop</title>
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+</head><body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="header">
+    <div class="navbar">
+      <a class="logo" href="index.html" aria-label="The Perfume Shop home">
+        <span class="logo-heading">Fragrance beyond ordinary</span>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="shop.html">Shop</a>
+        <a href="support.html">Support</a>
+        <a href="store.html">Store</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+          <span class="theme-icon" aria-hidden="true">☾</span><span class="theme-text">Dark</span>
+        </button>
+        <div class="cart-icon"><a href="cart.html">Cart (<span class="cart-count">0</span>)</a></div>
+      </div>
+    </div>
+  </header><main id="main-content">
+  <section class="page register-page">
+    <div class="auth-container"><p class="eyebrow">Customer account</p><h1>Create Account</h1><form class="auth-form" data-demo-auth="register" data-validated-form action="register.html" method="post"><div class="form-field"><label for="register-name">Full name</label><input id="register-name" name="name" type="text" autocomplete="name" minlength="2" required><small class="field-error" aria-live="polite"></small></div><div class="form-field"><label for="register-email">Email address</label><input id="register-email" name="email" type="email" autocomplete="email" required><small class="field-error" aria-live="polite"></small></div><div class="form-field"><label for="register-phone">Phone number</label><input id="register-phone" name="phone" type="tel" pattern="(?:\+27|0)[6-8][0-9]{8}" autocomplete="tel" required><small class="field-error" aria-live="polite"></small></div><div class="form-field"><label for="register-password">Password</label><input id="register-password" name="password" type="password" minlength="8" autocomplete="new-password" required><small class="field-error" aria-live="polite"></small></div><div class="form-field"><label for="confirm-password">Confirm password</label><input id="confirm-password" name="confirmPassword" type="password" minlength="8" autocomplete="new-password" required><small class="field-error" aria-live="polite"></small></div><button class="btn btn-primary" type="submit">Validate Registration</button></form><p class="auth-response" role="status" hidden></p><p>Already registered? <a href="login.html">Login here</a>.</p></div>
+  </section>
+</main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="store.html">Durban Store</a></li>
+          <li><a href="shop.html">Fragrance Catalogue</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="enquiry.html">Product Enquiry</a></li>
+          <li><a href="support.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Shopping</h4>
+        <ul>
+          <li><a href="cart.html">Your Cart</a></li>
+          <li><a href="store.html">Collection Information</a></li>
+          <li><a href="support.html#shipping">Shipping Information</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/" rel="noopener noreferrer" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; <span id="copyright-year">2026</span> The Perfume Shop. Fragrance beyond ordinary.</p></div>
+  </footer>
+  <script src="javascript/products.js" defer></script>
+  <script src="javascript/script.js" defer></script>
+</body>
+</html>

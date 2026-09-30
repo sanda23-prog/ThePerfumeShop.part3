@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search, filter and sort perfumes and home fragrances from The Perfume Shop. Add items to your live cart and shop in South African rand.">
+  <meta name="keywords" content="shop perfume online South Africa, perfume catalogue, home fragrance, Durban perfume store, fragrance prices">
+  <meta name="author" content="The Perfume Shop">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#100d0f">
+  <link rel="canonical" href="https://www.theperfumeshop.co.za/shop.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shop Perfumes & Home Fragrances | The Perfume Shop">
+  <meta property="og:description" content="Search, filter and sort perfumes and home fragrances from The Perfume Shop. Add items to your live cart and shop in South African rand.">
+  <meta property="og:url" content="https://www.theperfumeshop.co.za/shop.html">
+  <meta property="og:image" content="https://www.theperfumeshop.co.za/images/perfume-shop-collection.jpg">
+  <title>Shop Perfumes & Home Fragrances | The Perfume Shop</title>
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+</head><body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="header">
+    <div class="navbar">
+      <a class="logo" href="index.html" aria-label="The Perfume Shop home">
+        <span class="logo-heading">Fragrance beyond ordinary</span>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="shop.html">Shop</a>
+        <a href="support.html">Support</a>
+        <a href="store.html">Store</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+          <span class="theme-icon" aria-hidden="true">☾</span><span class="theme-text">Dark</span>
+        </button>
+        <div class="cart-icon"><a href="cart.html">Cart (<span class="cart-count">0</span>)</a></div>
+      </div>
+    </div>
+  </header><main id="main-content">
+  <section class="page catalog-page">
+    <div class="catalog-header">
+      <div><p class="eyebrow">The house edit</p><h1>Product Catalogue</h1></div>
+      <div class="filters" aria-label="Catalogue controls">
+        <input type="search" id="search-products" class="search-box" aria-label="Search products" placeholder="Search fragrances or notes…">
+        <select id="category-filter" class="filter-select" aria-label="Filter by category">
+          <option value="">All Categories</option>
+          <option value="fragrances">Fragrances</option>
+          <option value="home-fragrances">Home Fragrances</option>
+        </select>
+        <select id="sort-select" class="filter-select" aria-label="Sort products">
+          <option value="name-asc">Name: A–Z</option>
+          <option value="name-desc">Name: Z–A</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+    <div class="catalog-tools-row">
+      <p id="catalog-search-status" role="status" aria-live="polite">Loading products…</p>
+      <button id="clear-filters" class="text-button" type="button">Clear filters</button>
+    </div>
+    <div id="products-grid" class="products-grid" aria-live="polite"></div>
+    <div id="catalog-empty" class="empty-state" hidden>
+      <h3>No matching products</h3><p>Try a different search phrase or clear the filters.</p>
+    </div>
+  </section>
+
+  <section class="page gallery-section" aria-labelledby="gallery-heading">
+    <div class="section-heading"><p class="eyebrow">Visual gallery</p><h2 id="gallery-heading">Fragrance Gallery</h2><p>Select an image to open it in a larger lightbox view.</p></div>
+    <div class="gallery-grid">
+      <a href="images/art-of-universe-perfume.jpg" data-lightbox="images/art-of-universe-perfume.jpg" data-lightbox-alt="Art of Universe perfume" data-lightbox-caption="Art of Universe"><img src="images/art-of-universe-perfume.jpg" alt="Art of Universe perfume in the fragrance gallery" loading="lazy"></a>
+      <a href="images/atlantis-perfume.jpg" data-lightbox="images/atlantis-perfume.jpg" data-lightbox-alt="Atlantis perfume" data-lightbox-caption="Atlantis"><img src="images/atlantis-perfume.jpg" alt="Atlantis perfume in the fragrance gallery" loading="lazy"></a>
+      <a href="images/club-de-nuit-perfume.jpg" data-lightbox="images/club-de-nuit-perfume.jpg" data-lightbox-alt="Club de Nuit perfume" data-lightbox-caption="Club de Nuit"><img src="images/club-de-nuit-perfume.jpg" alt="Club de Nuit perfume in the fragrance gallery" loading="lazy"></a>
+      <a href="images/khamrah-lattafa-perfume.jpg" data-lightbox="images/khamrah-lattafa-perfume.jpg" data-lightbox-alt="Khamrah Lattafa perfume" data-lightbox-caption="Khamrah Lattafa"><img src="images/khamrah-lattafa-perfume.jpg" alt="Khamrah Lattafa perfume in the fragrance gallery" loading="lazy"></a>
+      <a href="images/asad-perfume.jpg" data-lightbox="images/asad-perfume.jpg" data-lightbox-alt="Asad perfume" data-lightbox-caption="Asad"><img src="images/asad-perfume.jpg" alt="Asad perfume in the fragrance gallery" loading="lazy"></a>
+      <a href="images/perfume-shop-collection.jpg" data-lightbox="images/perfume-shop-collection.jpg" data-lightbox-alt="Perfume collection" data-lightbox-caption="The Perfume Shop collection"><img src="images/perfume-shop-collection.jpg" alt="The Perfume Shop fragrance collection gallery image" loading="lazy"></a>
+    </div>
+  </section>
+
+  <dialog id="lightbox-dialog" class="lightbox-dialog" aria-labelledby="lightbox-caption">
+    <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close image">×</button>
+    <img id="lightbox-image" src="images/perfume-shop-collection.jpg" alt="">
+    <p id="lightbox-caption"></p>
+  </dialog>
+</main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="store.html">Durban Store</a></li>
+          <li><a href="shop.html">Fragrance Catalogue</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="enquiry.html">Product Enquiry</a></li>
+          <li><a href="support.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Shopping</h4>
+        <ul>
+          <li><a href="cart.html">Your Cart</a></li>
+          <li><a href="store.html">Collection Information</a></li>
+          <li><a href="support.html#shipping">Shipping Information</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/" rel="noopener noreferrer" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; <span id="copyright-year">2026</span> The Perfume Shop. Fragrance beyond ordinary.</p></div>
+  </footer>
+  <script src="javascript/products.js" defer></script>
+  <script src="javascript/script.js" defer></script>
+</body>
+</html>
