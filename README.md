@@ -300,20 +300,20 @@ Full steps and a post-deploy test list are in [`DEPLOYMENT-GUIDE.md`](DEPLOYMENT
 
 ## Testing Checklist
 
-- [ ] Home page loads with no console errors; all nav links work
-- [ ] Search, category filter and sort update the catalogue and result count
-- [ ] Add to Cart plays the animation, shows a toast and updates the cart badge
-- [ ] Quantity changes and removals recalculate totals immediately
-- [ ] Switching delivery method updates shipping, VAT and total
-- [ ] Checkout rejects invalid input, then creates an order and receipt
-- [ ] Print Receipt opens the print dialog with a clean receipt layout
-- [ ] Dark mode persists after a refresh
-- [ ] Gallery lightbox opens and closes (button, backdrop, Escape)
-- [ ] FAQ accordion opens and closes
-- [ ] Enquiry and Contact forms show errors for bad input and a response for valid input
-- [ ] Google Map loads on the Store page
-- [ ] Layout checked at mobile width in browser developer tools
-- [ ] Enquiry and Contact submissions appear in Netlify Forms after deployment
+- [✅ ] Home page loads with no console errors; all nav links work
+- [✅ ] Search, category filter and sort update the catalogue and result count
+- [✅] Add to Cart plays the animation, shows a toast and updates the cart badge
+- [✅ ] Quantity changes and removals recalculate totals immediately
+- [✅ ] Switching delivery method updates shipping, VAT and total
+- [✅ ] Checkout rejects invalid input, then creates an order and receipt
+- [✅ ] Print Receipt opens the print dialog with a clean receipt layout
+- [✅ ] Dark mode persists after a refresh
+- [✅ ] Gallery lightbox opens and closes (button, backdrop, Escape)
+- [✅ ] FAQ accordion opens and closes
+- [✅ ] Enquiry and Contact forms show errors for bad input and a response for valid input
+- [✅ ] Google Map loads on the Store page
+- [✅ ] Layout checked at mobile width in browser developer tools
+- [✅ ] Enquiry and Contact submissions appear in Netlify Forms after deployment
 
 ---
 
