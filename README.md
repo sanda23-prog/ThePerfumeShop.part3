@@ -359,4 +359,5 @@ See [`REFERENCES.md`](REFERENCES.md) for the full Harvard-style entries.
 
 ## Author
 
-_Add your name, student number, module code and institution here._
+
+Lusanda Bulelwa Radebe, ST10512932, WEB DEVELOPMENT 5020
