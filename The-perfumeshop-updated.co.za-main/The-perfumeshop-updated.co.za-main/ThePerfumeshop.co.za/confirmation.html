@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - The perfumeshop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Fragrance beyond ordinary</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="support.html">Support</a>
+                <a href="store.html">Store</a>
+                <a href="login.html">Login</a>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!--  ORDER CONFIRMATION PAGE  -->
+        <section class="page confirmation-page">
+            <div class="confirmation-container">
+                <div class="success-message">
+                    <h2>✓ Order Confirmed!</h2>
+                    <p>Thank you for your purchase.</p>
+                </div>
+
+                <div class="confirmation-details">
+                    <h3>Order Details</h3>
+                    <div class="detail-row">
+                        <span class="label">Order Number:</span>
+                        <span id="order-number" class="value">#ORD-2024-001</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Order Date:</span>
+                        <span id="order-date" class="value">August 15, 2026</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Total Amount:</span>
+                        <span id="order-total" class="value">R700.00</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Estimated Delivery:</span>
+                        <span id="delivery-date" class="value">August 20, 2026</span>
+                    </div>
+                </div>
+
+                <div class="digital-receipt">
+                    <h3>Digital Receipt</h3>
+                    <p>A receipt has been sent to your email address.</p>
+                    <button class="btn btn-secondary" onclick="downloadReceipt()">Download Receipt (PDF)</button>
+                </div>
+
+                <div class="confirmation-actions">
+                    <button class="btn btn-primary" onclick="window.location.href='index.html'">Back to Home</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='shop.html'">Continue Shopping</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#press">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="support.html">Contact Us</a></li>
+                    <li><a href="support.html">FAQ</a></li>
+                    <li><a href="support.html">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#returns">Returns Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#facebook">Facebook</a>
+                    <a href="#twitter">Twitter</a>
+                    <a href="#instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; theperfumeshop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

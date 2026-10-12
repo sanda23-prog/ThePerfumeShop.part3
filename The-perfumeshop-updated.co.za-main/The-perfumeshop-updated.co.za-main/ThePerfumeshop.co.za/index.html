@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The perfumeshop.co.za</title>
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Fragrance beyond ordinary</h1>
+            </div>
+
+            <nav class="nav-menu" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="support.html">Support</a>
+                <a href="shop.html">Store</a>
+                <a href="login.html">Login</a>
+            </nav>
+
+            <div class="cart-icon">
+                <a href="#cart">
+                    Cart (<span class="cart-count">0</span>)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- WELCOME / HOME PAGE -->
+        <section id="home" class="page welcome-page">
+            <div class="hero">
+                <h2>Welcome to the perfumeshop</h2>
+                <p>Discover amazing scents at great prices</p>
+
+                <div class="hero-buttons">
+                    <button
+                        class="btn btn-primary"
+                        onclick="navigateTo('catalog')">
+                        Start Shopping
+                    </button>
+
+                    <button
+                        class="btn btn-secondary"
+                        onclick="navigateTo('guest')">
+                        Continue as Guest
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGIN PAGE -->
+        <section id="login" class="page login-page hidden">
+            <div class="auth-container">
+                <h2>Login</h2>
+
+                <form class="auth-form">
+                    <input
+                        type="email"
+                        placeholder="Email Address"
+                        required>
+
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        required>
+
+                    <button type="submit" class="btn btn-primary">
+                        Login
+                    </button>
+                </form>
+
+                <p>
+                    Don't have an account?
+                    <a href="#register">Register here</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- REGISTRATION PAGE -->
+        <section id="register" class="page register-page hidden">
+            <div class="auth-container">
+                <h2>Create Account</h2>
+
+                <form class="auth-form">
+                    <input
+                        type="text"
+                        placeholder="Full Name"
+                        required>
+
+                    <input
+                        type="email"
+                        placeholder="Email Address"
+                        required>
+
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        required>
+
+                    <input
+                        type="password"
+                        placeholder="Confirm Password"
+                        required>
+
+                    <input
+                        type="tel"
+                        placeholder="Phone Number"
+                        required>
+
+                    <button type="submit" class="btn btn-primary">
+                        Register
+                    </button>
+                </form>
+
+                <p>
+                    Already have an account?
+                    <a href="#login">Login here</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- CONTINUE AS GUEST -->
+        <section id="guest" class="page guest-page hidden">
+            <div class="guest-container">
+                <h2>Shopping as Guest</h2>
+
+                <p>
+                    You can browse and shop without creating an account.
+                    Your cart will be saved during this session.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="navigateTo('catalog')">
+                    Start Shopping
+                </button>
+            </div>
+        </section>
+
+        <!-- PRODUCT CATALOG PAGE -->
+        <section id="catalog" class="page catalog-page hidden">
+            <div class="catalog-header">
+                <h2>Product Catalog</h2>
+
+                <div class="filters">
+                    <input
+                        type="text"
+                        id="search-products"
+                        aria-label="Search all catalogue products"
+                        placeholder="Search products..."
+                        class="search-box">
+
+                    <select
+                        id="category-filter"
+                        class="filter-select"
+                        aria-label="Filter by category">
+
+                        <option value="">All Categories</option>
+                        <option value="fragrances">Fragrances</option>
+                        <option value="home-fragrances">
+                            Home Fragrances
+                        </option>
+                    </select>
+
+                    <select
+                        id="sort-select"
+                        class="filter-select"
+                        aria-label="Sort products">
+
+                        <option value="name-asc">
+                            Sort by Name (A-Z)
+                        </option>
+
+                        <option value="name-desc">
+                            Sort by Name (Z-A)
+                        </option>
+
+                        <option value="price-low">
+                            Price: Low to High
+                        </option>
+
+                        <option value="price-high">
+                            Price: High to Low
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <p
+                id="catalog-search-status"
+                role="status"
+                aria-live="polite"
+                hidden>
+            </p>
+
+            <!-- PRODUCT GRID -->
+            <div class="products-grid">
+
+                <!-- PRODUCT CARD 1 -->
+                <div
+                    class="product-card"
+                    data-product-id="1"
+                    data-category="fragrances">
+
+                    <img
+                        src="images/Art of arabia 3.jpg"
+                        alt="Product 1"
+                        width="450"
+                        height="400"
+                        class="product-image">
+
+                    <div class="product-info">
+                        <h3 class="product-name">Art of univere </h3>
+                        <p class="product-category">Fragrances</p>
+
+                        <p class="product-description">
+                            Art of the Universe is a creative expression of
+                            the beauty, mystery, and vastness of the cosmos,
+                            inspired by stars, planets, galaxies, and the
+                            wonders of space.
+                        </p>
+
+                        <div class="product-footer">
+                            <span class="product-price">R 700.00</span>
+
+                            <button
+                                class="btn btn-add-cart"
+                                onclick="addToCart(1)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD 2 -->
+                <div
+                    class="product-card"
+                    data-product-id="2"
+                    data-category="fragrances">
+
+                    <img
+                        src="images/Atlantis perfume.jpg"
+                        alt="Product 2"
+                        width="450"
+                        height="400"
+                        class="product-image">
+
+                    <div class="product-info">
+                        <h3 class="product-name">Atlantis</h3>
+                        <p class="product-category">Fragrances</p>
+
+                        <p class="product-description">
+                            Atlantis is a captivating fragrance with a fresh,
+                            luxurious blend of citrus, aromatic herbs, and
+                            warm woody notes—perfect for the confident,
+                            modern man.
+                        </p>
+
+                        <div class="product-footer">
+                            <span class="product-price">R980.00</span>
+
+                            <button
+                                class="btn btn-add-cart"
+                                onclick="addToCart(2)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD 3 -->
+                <div
+                    class="product-card"
+                    data-product-id="3"
+                    data-category="fragrances">
+
+                    <img
+                        src="images/Club de nuit perfume.jpg"
+                        alt="Product 3"
+                        width="450"
+                        height="400"
+                        class="product-image">
+
+                    <div class="product-info">
+                        <h3 class="product-name">Club de nuit</h3>
+                        <p class="product-category">Fragrances</p>
+
+                        <p class="product-description">
+                            Club de Nuit is a bold, sophisticated fragrance
+                            with fresh citrus, smoky woods, and a smooth
+                            musky finish. It’s elegant, long-lasting, and
+                            perfect for making a confident impression.
+                        </p>
+
+                        <div class="product-footer">
+                            <span class="product-price">R780.00</span>
+
+                            <button
+                                class="btn btn-add-cart"
+                                onclick="addToCart(3)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD 4 -->
+                <div
+                    class="product-card"
+                    data-product-id="4"
+                    data-category="fragrances">
+
+                    <img
+                        src="images/Art of arabia 3.jpg"
+                        alt="Product 4"
+                        width="450"
+                        height="400"
+                        class="product-image">
+
+                    <div class="product-info">
+                        <h3 class="product-name">Art of arabia III</h3>
+                        <p class="product-category">Fragrances</p>
+
+                        <p class="product-description">
+                            Art of Arabia III is a rich, luxurious fragrance
+                            blending fresh citrus, warm spices, creamy woods,
+                            and subtle oriental notes. Elegant and captivating,
+                            it’s perfect for those who love a bold
+                            Arabian-inspired scent.
+                        </p>
+
+                        <div class="product-footer">
+                            <span class="product-price">R1100</span>
+
+                            <button
+                                class="btn btn-add-cart"
+                                onclick="addToCart(4)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD 5 -->
+                <div
+                    class="product-card"
+                    data-product-id="5"
+                    data-category="fragrances">
+
+                    <img
+                        src="images/Khamrah lattafa.jpg"
+                        alt="Product 5"
+                        width="450"
+                        height="400"
+                        class="product-image">
+
+                    <div class="product-info">
+                        <h3 class="product-name">Khamrag lattafa</h3>
+                        <p class="product-category">Fragrances</p>
+
+                        <p class="product-description">
+                            Khamrah Dukhan is a warm, smoky and seductive
+                            fragrance with rich spices, sweet gourmand notes,
+                            and deep woody accords. Bold and luxurious, it’s
+                            perfect for cool evenings and making a lasting
+                            impression.
+                        </p>
+
+                        <div class="product-footer">
+                            <span class="product-price">R680.00</span>
+
+                            <button
+                                class="btn btn-add-cart"
+                                onclick="addToCart(5)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD 6 -->
+                <div
+                    class="product-card"
+                    data-product-id="6"
+                    data-category="fragrances">
+
+                    <img
+                        src="images/Proud of you amber.webp"
+                        alt="Product 6"
+                        width="450"
+                        height="400"
+                        class="product-image">
+
+                    <div class="product-info">
+                        <h3 class="product-name">Product Name 6</h3>
+                        <p class="product-category">Fragrances</p>
+
+                        <p class="product-description">
+                            Proud of You Amber is a warm, sophisticated
+                            fragrance with rich amber, sweet vanilla, and
+                            smooth woody notes. Elegant and comforting, it’s
+                            perfect for a confident, luxurious scent profile.
+                        </p>
+
+                        <div class="product-footer">
+                            <span class="product-price">R400.00</span>
+
+                            <button
+                                class="btn btn-add-cart"
+                                onclick="addToCart(6)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD 7 -->
+                <div
+                    class="product-card"
+                    data-product-id="7"
+                    data-category="fragrances">
+
+                    <img
+                        src="images/Scentemy.jpg"
+                        alt="Product 7"
+                        width="450"
+                        height="400"
+                        class="product-image">
+
+                    <div class="product-info">
+                        <h3 class="product-name">Scentemy NO xxx</h3>
+                        <p class="product-category">Fragrances</p>
+
+                        <p class="product-description">
+                            Scentemy is a captivating fragrance with a fresh,
+                            elegant blend of aromatic, sweet, and woody notes.
+                            Smooth and versatile, it’s perfect for everyday
+                            wear or adding a touch of sophistication to any
+                            occasion.
+                        </p>
+
+                        <div class="product-footer">
+                            <span class="product-price">R1500.00</span>
+
+                            <button
+                                class="btn btn-add-cart"
+                                onclick="addToCart(7)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARD 8 -->
+                <div
+                    class="product-card"
+                    data-product-id="8"
+                    data-category="fragrances">
+
+                    <img
+                        src="images/asad.jpg"
+                        alt="Product 8"
+                        width="450"
+                        height="400"
+                        class="product-image">
+
+                    <div class="product-info">
+                        <h3 class="product-name">Asad</h3>
+                        <p class="product-category">Fragrances</p>
+
+                        <p class="product-description">
+                            Asad is a bold, warm fragrance with spicy, smoky,
+                            and woody notes, balanced by a touch of sweetness.
+                            Powerful and masculine, it’s ideal for evenings
+                            and cooler weather.
+                        </p>
+
+                        <div class="product-footer">
+                            <span class="product-price">R700.00</span>
+
+                            <button
+                                class="btn btn-add-cart"
+                                onclick="addToCart(8)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PRODUCT DETAILS PAGE -->
+        <section id="product-detail" class="page product-detail-page hidden">
+            <div class="product-detail-container">
+                <div class="detail-image-section">
+                    <img
+                        id="detail-main-image"
+                        src="images/products/product-1.jpg"
+                        alt="Product"
+                        class="detail-main-image">
+
+                    <div class="detail-thumbnails">
+                        <img
+                            src="images/Perfumeshop thumbnails.jpg"
+                            alt="Thumb 1"
+                            class="thumbnail">
+
+                        <img
+                            src="images/The perfumes multiple.jpg"
+                            alt="Thumb 2"
+                            class="thumbnail">
+
+                        <img
+                            src="images/more perfumes thumbnails.jpg"
+                            alt="Thumb 3"
+                            class="thumbnail">
+                    </div>
+                </div>
+
+                <div class="detail-info-section">
+                    <h2 id="detail-product-name">Product Name</h2>
+                    <p class="detail-category">Category</p>
+
+                    <div class="detail-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="review-count">(120 reviews)</span>
+                    </div>
+
+                    <p id="detail-description" class="detail-description">
+                        Full product description goes here. Include all
+                        relevant details about features, specifications,
+                        and benefits.
+                    </p>
+
+                    <div class="detail-specs">
+                        <h3>Specifications</h3>
+
+                        <ul>
+                            <li>
+                                <strong>Dimensions:</strong>
+                                <span id="spec-dimensions">N/A</span>
+                            </li>
+
+                            <li>
+                                <strong>Weight:</strong>
+                                <span id="spec-weight">N/A</span>
+                            </li>
+
+                            <li>
+                                <strong>Material:</strong>
+                                <span id="spec-material">N/A</span>
+                            </li>
+
+                            <li>
+                                <strong>Color:</strong>
+                                <span id="spec-color">N/A</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-purchase">
+                        <div class="price-section">
+                            <span id="detail-price" class="detail-price">
+                                R750.00
+                            </span>
+
+                            <span class="stock-status">In Stock</span>
+                        </div>
+
+                        <div class="quantity-selector">
+                            <label for="quantity">Quantity:</label>
+
+                            <input
+                                type="number"
+                                id="quantity"
+                                min="1"
+                                value="1">
+                        </div>
+
+                        <button
+                            class="btn btn-primary btn-large"
+                            onclick="addToCartFromDetail()">
+                            Add to Cart
+                        </button>
+
+                        <button class="btn btn-secondary btn-large">
+                            Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOPPING CART PAGE -->
+        <section id="cart" class="page cart-page hidden">
+            <h2>Shopping Cart</h2>
+
+            <div class="cart-container">
+                <div
+                    class="cart-items"
+                    role="region"
+                    aria-label="Shopping cart items"
+                    tabindex="0">
+
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="cart-items-list">
+                            <!-- Populated by your existing JavaScript. -->
+                        </tbody>
+                    </table>
+
+                    <p id="empty-cart-message" class="empty-cart">
+                        Your cart is empty
+                    </p>
+                </div>
+
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">R1000.00</span>
+                    </div>
+
+                    <div class="summary-line">
+                        <span>Shipping:</span>
+                        <span id="shipping">R0.00</span>
+                    </div>
+
+                    <div class="summary-line">
+                        <span>Tax:</span>
+                        <span id="tax">R150.00</span>
+                    </div>
+
+                    <div class="summary-line total">
+                        <span>Total:</span>
+                        <span id="total">R1500.00</span>
+                    </div>
+
+                    <button
+                        class="btn btn-primary btn-full"
+                        onclick="navigateTo('checkout')">
+                        Proceed to Checkout
+                    </button>
+
+                    <button
+                        class="btn btn-secondary btn-full"
+                        onclick="navigateTo('catalog')">
+                        Continue Shopping
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHECKOUT PAGE -->
+        <section id="checkout" class="page checkout-page hidden">
+            <h2>Checkout</h2>
+
+            <div class="checkout-container">
+                <form class="checkout-form">
+
+                    <!-- SHIPPING INFORMATION -->
+                    <fieldset>
+                        <legend>Shipping Information</legend>
+
+                        <input
+                            type="text"
+                            placeholder="Full Name"
+                            required>
+
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            required>
+
+                        <input
+                            type="tel"
+                            placeholder="Phone Number"
+                            required>
+
+                        <input
+                            type="text"
+                            placeholder="Street Address"
+                            required>
+
+                        <input
+                            type="text"
+                            placeholder="City"
+                            required>
+
+                        <input
+                            type="text"
+                            placeholder="Province/State"
+                            required>
+
+                        <input
+                            type="text"
+                            placeholder="Postal Code"
+                            required>
+
+                        <select required>
+                            <option value="">Select Country</option>
+                            <option value="za">South Africa</option>
+                            <option value="us">United States</option>
+                            <option value="uk">South Africa</option>
+                        </select>
+                    </fieldset>
+
+                    <!-- BILLING INFORMATION -->
+                    <fieldset>
+                        <legend>Billing Information</legend>
+
+                        <label>
+                            <input type="checkbox" checked>
+                            Same as shipping address
+                        </label>
+
+                        <div id="billing-fields" style="display: none;">
+                            <input type="text" placeholder="Full Name">
+                            <input type="text" placeholder="Street Address">
+                            <input type="text" placeholder="City">
+                            <input type="text" placeholder="Province/State">
+                            <input type="text" placeholder="Postal Code">
+                        </div>
+                    </fieldset>
+
+                    <!-- SHIPPING METHOD -->
+                    <fieldset>
+                        <legend>Shipping Method</legend>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="shipping"
+                                value="standard"
+                                checked>
+                            Standard Shipping (5-7 days) - R80.00
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="shipping"
+                                value="express">
+                            Express Shipping (2-3 days) - R100.00
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="shipping"
+                                value="overnight">
+                            Overnight Shipping - R180.00
+                        </label>
+                    </fieldset>
+
+                    <!-- PAYMENT INFORMATION -->
+                    <fieldset>
+                        <legend>Payment Information</legend>
+
+                        <input
+                            type="text"
+                            placeholder="Cardholder Name"
+                            required>
+
+                        <input
+                            type="text"
+                            placeholder="Card Number (XXXX XXXX XXXX XXXX)"
+                            required>
+
+                        <div class="payment-row">
+                            <input
+                                type="text"
+                                placeholder="MM/YY"
+                                required>
+
+                            <input
+                                type="text"
+                                placeholder="CVC"
+                                required>
+                        </div>
+                    </fieldset>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary btn-full">
+                        Complete Purchase
+                    </button>
+                </form>
+
+                <!-- ORDER SUMMARY SIDEBAR -->
+                <div class="checkout-summary">
+                    <h3>Order Summary</h3>
+
+                    <div id="checkout-items-list">
+                        <!-- Populated by your existing JavaScript. -->
+                    </div>
+
+                    <div class="checkout-totals">
+                        <div class="summary-line">
+                            <span>Subtotal:</span>
+                            <span id="checkout-subtotal">R 100.00</span>
+                        </div>
+
+                        <div class="summary-line">
+                            <span>Shipping:</span>
+                            <span id="checkout-shipping">R500.00</span>
+                        </div>
+
+                        <div class="summary-line">
+                            <span>Tax:</span>
+                            <span id="checkout-tax">R0.00</span>
+                        </div>
+
+                        <div class="summary-line total">
+                            <span>Total:</span>
+                            <span id="checkout-total">R0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ORDER CONFIRMATION PAGE -->
+        <section id="confirmation" class="page confirmation-page hidden">
+            <div class="confirmation-container">
+                <div class="success-message">
+                    <h2>✓ Order Confirmed!</h2>
+                    <p>Thank you for your purchase.</p>
+                </div>
+
+                <div class="confirmation-details">
+                    <h3>Order Details</h3>
+
+                    <div class="detail-row">
+                        <span class="label">Order Number:</span>
+                        <span id="order-number" class="value">
+                            #ORD-2024-001
+                        </span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Order Date:</span>
+                        <span id="order-date" class="value">
+                            August 15, 2026
+                        </span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Total Amount:</span>
+                        <span id="order-total" class="value">R700.00</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="label">Estimated Delivery:</span>
+                        <span id="delivery-date" class="value">
+                            August 20, 2026
+                        </span>
+                    </div>
+                </div>
+
+                <div class="digital-receipt">
+                    <h3>Digital Receipt</h3>
+                    <p>A receipt has been sent to your email address.</p>
+
+                    <button
+                        class="btn btn-secondary"
+                        onclick="downloadReceipt()">
+                        Download Receipt (PDF)
+                    </button>
+                </div>
+
+                <div class="confirmation-actions">
+                    <button
+                        class="btn btn-primary"
+                        onclick="navigateTo('home')">
+                        Back to Home
+                    </button>
+
+                    <button
+                        class="btn btn-secondary"
+                        onclick="navigateTo('catalog')">
+                        Continue Shopping
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US PAGE -->
+        <section id="about" class="page about-page hidden">
+            <div class="about-container">
+                <h2>About Us</h2>
+
+                <p>
+                    Welcome to our online store. We've been serving customers
+                    since 2025 with quality products and excellent customer
+                    service.
+                </p>
+
+                <div class="about-section">
+                    <h3>Our Mission</h3>
+
+                    <p>
+                        To provide affordable, high-quality products to
+                        customers around the world.
+                    </p>
+                </div>
+
+                <div class="about-section">
+                    <h3>Why Choose Us?</h3>
+
+                    <ul>
+                        <li>Wide selection of products</li>
+                        <li>Competitive pricing</li>
+                        <li>Fast shipping</li>
+                        <li>Excellent customer support</li>
+                        <li>Easy returns & exchanges</li>
+                    </ul>
+                </div>
+
+                <div class="about-section">
+                    <h3>Our Team</h3>
+
+                    <p>
+                        Our dedicated team works around the clock to ensure
+                        you have the best shopping experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOMER SUPPORT PAGE -->
+        <section id="support" class="page support-page hidden">
+            <div class="support-container">
+                <h2>Customer Support</h2>
+
+                <div class="support-section">
+                    <h3>Frequently Asked Questions</h3>
+
+                    <div class="faq-item">
+                        <h4>What is your return policy?</h4>
+
+                        <p>
+                            We offer 30-day returns on most items. Please
+                            contact our support team for more details.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How long does shipping take?</h4>
+
+                        <p>
+                            Standard shipping takes 5-7 business days.
+                            Express options available for faster delivery.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I cancel my order?</h4>
+
+                        <p>
+                            Orders can be cancelled within 24 hours of
+                            placement. Contact support immediately.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Do you offer customer support?</h4>
+
+                        <p>
+                            Yes! Contact us via email, phone, or live chat
+                            during business hours.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="support-section">
+                    <h3>Contact Us</h3>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+
+                            <a href="mailto:theperfumeshop">
+                                support@theperfumeshope.com
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+
+                            <a href="tel:+27670737096">
+                                +27 (0) 67 073 7096
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>Hours:</strong>
+                            Monday - Friday, 9AM - 6PM SAST
+                        </div>
+                    </div>
+
+                    <form class="contact-form">
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            required>
+
+                        <input
+                            type="email"
+                            placeholder="Your Email"
+                            required>
+
+                        <textarea
+                            placeholder="Your Message"
+                            rows="5"
+                            required></textarea>
+
+                        <button type="submit" class="btn btn-primary">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHYSICAL STORE PAGE -->
+        <section id="store" class="page store-page hidden">
+            <div class="store-container">
+                <h2>Visit Our Physical Store</h2>
+
+                <div class="store-info">
+                    <h3>Store Location</h3>
+
+                    <p>
+                        <strong>Address:</strong>
+                        123 Main Street, Durban, KwaZulu-Natal 4000,
+                        South Africa
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+
+                        <a href="tel:+27670737096">
+                            +27 (0) 67 073 7096
+                        </a>
+                    </p>
+                </div>
+
+                <!-- EXISTING GOOGLE MAPS CODE -->
+                <div class="store-map">
+                    <iframe
+                        title="Store location map"
+                        src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE_HERE"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="store-hours">
+                    <h3>Hours of Operation</h3>
+
+                    <table>
+                        <tr>
+                            <td>Monday - Friday:</td>
+                            <td>9:00 AM - 8:00 PM</td>
+                        </tr>
+
+                        <tr>
+                            <td>Saturday:</td>
+                            <td>9:00 AM - 6:00 PM</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sunday:</td>
+                            <td>11:00 AM - 5:00 PM</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About</h4>
+
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#press">Press</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Support</h4>
+
+                <ul>
+                    <li><a href="#support">Contact Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#shipping">Shipping Info</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#returns">Returns Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+
+                <div class="social-links">
+                    <a href="#facebook">Facebook</a>
+                    <a href="#twitter">Twitter</a>
+                    <a href="#instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; theperfumeshop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- KEEP YOUR EXISTING SCRIPT -->
+    <script src="script.js"></script>
+
+    <!-- NEW CATALOGUE SEARCH, CATEGORY AND SORTING SCRIPT -->
+    <script src="catalog-controls.js"></script>
+</body>
+</html>

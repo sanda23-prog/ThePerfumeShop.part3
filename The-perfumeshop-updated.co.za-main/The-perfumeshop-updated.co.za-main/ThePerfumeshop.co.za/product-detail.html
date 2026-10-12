@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - The perfumeshop</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Fragrance beyond ordinary</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="support.html">Support</a>
+                <a href="store.html">Store</a>
+                <a href="login.html">Login</a>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- PRODUCT DETAILS PAGE -->
+        <section class="page product-detail-page">
+            <div class="product-detail-container">
+                <!-- ⭐ PRODUCT DETAIL IMAGE ⭐ -->
+                <div class="detail-image-section">
+                    <img id="detail-main-image" src="images/products/product-1.jpg" alt="Product" class="detail-main-image">
+                    <div class="detail-thumbnails">
+                        <img src="Perfumeshop thumbnails.jpg" alt="Thumb 1" class="thumbnail">
+                        <img src="The perfumes multiple.jpg" alt="Thumb 2" class="thumbnail">
+                        <img src="more perfumes thumbnails.jpg" alt="Thumb 3" class="thumbnail">
+                    </div>
+                </div>
+
+                <div class="detail-info-section">
+                    <h2 id="detail-product-name">Product Name</h2>
+                    <p class="detail-category">Category</p>
+                    <div class="detail-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="review-count">(120 reviews)</span>
+                    </div>
+
+                    <p id="detail-description" class="detail-description">
+                        Full product description goes here. Include all relevant details about features, specifications, and benefits.
+                    </p>
+
+                    <div class="detail-specs">
+                        <h3>Specifications</h3>
+                        <ul>
+                            <li><strong>Dimensions:</strong> <span id="spec-dimensions">N/A</span></li>
+                            <li><strong>Weight:</strong> <span id="spec-weight">N/A</span></li>
+                            <li><strong>Material:</strong> <span id="spec-material">N/A</span></li>
+                            <li><strong>Color:</strong> <span id="spec-color">N/A</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-purchase">
+                        <div class="price-section">
+                            <span id="detail-price" class="detail-price">R750.00</span>
+                            <span class="stock-status">In Stock</span>
+                        </div>
+
+                        <div class="quantity-selector">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" min="1" value="1">
+                        </div>
+
+                        <button class="btn btn-primary btn-large" onclick="addToCartFromDetail()">Add to Cart</button>
+                        <button class="btn btn-secondary btn-large">Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#press">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="support.html">Contact Us</a></li>
+                    <li><a href="support.html">FAQ</a></li>
+                    <li><a href="support.html">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#returns">Returns Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#facebook">Facebook</a>
+                    <a href="#twitter">Twitter</a>
+                    <a href="#instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; theperfumeshop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
