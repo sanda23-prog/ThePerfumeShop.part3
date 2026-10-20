@@ -3,7 +3,7 @@
 A multi-page e-commerce website for a Durban-based fragrance and home-fragrance retailer, built with **plain HTML, CSS and JavaScript** (no frameworks, no build step). It is the Part 3 submission of an academic web development project and includes a working product catalogue, shopping cart, checkout with printable receipt, validated forms, an interactive map, a gallery lightbox, light/dark mode and a full SEO setup.
 
 > **Live site:** https://melodic-boba-f70f05.netlify.app/shop
-> **Repository:** _add your GitHub repository URL here_
+> **Repository:** https://github.com/sanda23-prog/ThePerfumeShop.part3/tree/main
 
 ---
 
