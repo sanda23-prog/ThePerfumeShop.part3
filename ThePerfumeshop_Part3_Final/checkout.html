@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete the demo checkout for your fragrance order, choose delivery or collection and generate a printable receipt.">
+  <meta name="keywords" content="perfume checkout, fragrance delivery Durban, perfume store collection, South Africa checkout">
+  <meta name="author" content="The Perfume Shop">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#100d0f">
+  <link rel="canonical" href="https://www.theperfumeshop.co.za/checkout.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Checkout | The Perfume Shop">
+  <meta property="og:description" content="Complete the demo checkout for your fragrance order, choose delivery or collection and generate a printable receipt.">
+  <meta property="og:url" content="https://www.theperfumeshop.co.za/checkout.html">
+  <meta property="og:image" content="https://www.theperfumeshop.co.za/images/perfume-shop-collection.jpg">
+  <title>Checkout | The Perfume Shop</title>
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+</head><body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="header">
+    <div class="navbar">
+      <a class="logo" href="index.html" aria-label="The Perfume Shop home">
+        <span class="logo-heading">Fragrance beyond ordinary</span>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="shop.html">Shop</a>
+        <a href="support.html">Support</a>
+        <a href="store.html">Store</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+          <span class="theme-icon" aria-hidden="true">☾</span><span class="theme-text">Dark</span>
+        </button>
+        <div class="cart-icon"><a href="cart.html">Cart (<span class="cart-count">0</span>)</a></div>
+      </div>
+    </div>
+  </header><main id="main-content">
+  <section class="page checkout-page">
+    <h1>Checkout</h1>
+    <div class="checkout-container">
+      <form id="checkout-form" class="checkout-form" data-validated-form action="confirmation.html" method="post">
+        <fieldset>
+          <legend>Contact Details</legend>
+          <div class="form-field"><label for="checkout-name">Full name</label><input id="checkout-name" name="fullName" type="text" autocomplete="name" minlength="2" required><small class="field-error" aria-live="polite"></small></div>
+          <div class="form-field"><label for="checkout-email">Email address</label><input id="checkout-email" name="email" type="email" autocomplete="email" required><small class="field-error" aria-live="polite"></small></div>
+          <div class="form-field"><label for="checkout-phone">Phone number</label><input id="checkout-phone" name="phone" type="tel" autocomplete="tel" pattern="(?:\+27|0)[6-8][0-9]{8}" placeholder="0821234567" required><small class="field-error" aria-live="polite"></small></div>
+        </fieldset>
+        <fieldset>
+          <legend>Fulfilment</legend>
+          <div class="form-field"><label for="checkout-shipping-method">Delivery option</label><select id="checkout-shipping-method" name="shippingMethod" required><option value="standard">Standard delivery — R80</option><option value="express">Express delivery — R120</option><option value="collection">Collect in store — Free</option></select><small class="field-error" aria-live="polite"></small></div>
+          <div id="delivery-fields" class="form-grid">
+            <div class="form-field"><label for="address">Street address</label><input id="address" name="address" type="text" autocomplete="street-address" data-delivery-required="true" required><small class="field-error" aria-live="polite"></small></div>
+            <div class="form-field"><label for="city">City</label><input id="city" name="city" type="text" autocomplete="address-level2" data-delivery-required="true" required><small class="field-error" aria-live="polite"></small></div>
+            <div class="form-field"><label for="province">Province</label><select id="province" name="province" data-delivery-required="true" required><option value="">Select province</option><option>KwaZulu-Natal</option><option>Gauteng</option><option>Western Cape</option><option>Eastern Cape</option><option>Free State</option><option>Limpopo</option><option>Mpumalanga</option><option>North West</option><option>Northern Cape</option></select><small class="field-error" aria-live="polite"></small></div>
+            <div class="form-field"><label for="postal-code">Postal code</label><input id="postal-code" name="postalCode" type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" data-delivery-required="true" required><small class="field-error" aria-live="polite"></small></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Demo Payment</legend>
+          <div class="form-field"><label for="payment-method">Payment method</label><select id="payment-method" name="paymentMethod" required><option value="demo-card">Demo card payment</option><option value="eft">EFT / bank transfer demo</option><option value="pay-collection">Pay on collection</option></select><small class="field-error" aria-live="polite"></small></div>
+          <p class="form-note">Assessment demo only — no real card details or payments are collected.</p>
+        </fieldset>
+        <button class="btn btn-primary btn-full" type="submit">Place Demo Order</button>
+      </form>
+      <aside class="checkout-summary" aria-label="Checkout summary">
+        <h3>Your Order</h3>
+        <div id="checkout-items-list"></div>
+        <p id="checkout-empty" class="form-note" hidden>Your cart is empty.</p>
+        <div class="checkout-totals">
+          <div class="summary-line"><span>Subtotal</span><strong id="checkout-subtotal">R0.00</strong></div>
+          <div class="summary-line"><span>Delivery</span><strong id="checkout-shipping">R0.00</strong></div>
+          <div class="summary-line"><span>VAT included</span><strong id="checkout-vat">R0.00</strong></div>
+          <div class="summary-line total"><span>Total</span><strong id="checkout-total">R0.00</strong></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="store.html">Durban Store</a></li>
+          <li><a href="shop.html">Fragrance Catalogue</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="enquiry.html">Product Enquiry</a></li>
+          <li><a href="support.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Shopping</h4>
+        <ul>
+          <li><a href="cart.html">Your Cart</a></li>
+          <li><a href="store.html">Collection Information</a></li>
+          <li><a href="support.html#shipping">Shipping Information</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/" rel="noopener noreferrer" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; <span id="copyright-year">2026</span> The Perfume Shop. Fragrance beyond ordinary.</p></div>
+  </footer>
+  <script src="javascript/products.js" defer></script>
+  <script src="javascript/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review your selected fragrances, change quantities and see live South African rand totals before checkout.">
+  <meta name="keywords" content="perfume shopping cart, fragrance checkout South Africa, Durban perfume delivery">
+  <meta name="author" content="The Perfume Shop">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#100d0f">
+  <link rel="canonical" href="https://www.theperfumeshop.co.za/cart.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shopping Cart | The Perfume Shop">
+  <meta property="og:description" content="Review your selected fragrances, change quantities and see live South African rand totals before checkout.">
+  <meta property="og:url" content="https://www.theperfumeshop.co.za/cart.html">
+  <meta property="og:image" content="https://www.theperfumeshop.co.za/images/perfume-shop-collection.jpg">
+  <title>Shopping Cart | The Perfume Shop</title>
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+</head><body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="header">
+    <div class="navbar">
+      <a class="logo" href="index.html" aria-label="The Perfume Shop home">
+        <span class="logo-heading">Fragrance beyond ordinary</span>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="shop.html">Shop</a>
+        <a href="support.html">Support</a>
+        <a href="store.html">Store</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+          <span class="theme-icon" aria-hidden="true">☾</span><span class="theme-text">Dark</span>
+        </button>
+        <div class="cart-icon"><a href="cart.html">Cart (<span class="cart-count">0</span>)</a></div>
+      </div>
+    </div>
+  </header><main id="main-content">
+  <section class="page cart-page">
+    <h1>Shopping Cart</h1>
+    <div class="cart-container">
+      <div class="cart-items">
+        <table class="cart-table">
+          <thead><tr><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th><th>Action</th></tr></thead>
+          <tbody id="cart-items-list"></tbody>
+        </table>
+        <div id="empty-cart-message" class="empty-cart"><p>Your cart is empty.</p><a class="btn btn-primary" href="shop.html">Browse Fragrances</a></div>
+      </div>
+      <aside class="cart-summary" aria-label="Order summary">
+        <h3>Order Summary</h3>
+        <label class="summary-select" for="shipping-method">Delivery option</label>
+        <select id="shipping-method" aria-label="Delivery option">
+          <option value="standard">Standard delivery — R80</option>
+          <option value="express">Express delivery — R120</option>
+          <option value="collection">Collect in store — Free</option>
+        </select>
+        <div class="summary-line"><span>Subtotal</span><strong id="subtotal">R0.00</strong></div>
+        <div class="summary-line"><span>Delivery</span><strong id="shipping">R0.00</strong></div>
+        <div class="summary-line"><span>VAT included (15%)</span><strong id="vat-included">R0.00</strong></div>
+        <div class="summary-line total"><span>Total</span><strong id="total">R0.00</strong></div>
+        <a id="checkout-button" class="btn btn-primary btn-full" href="checkout.html">Proceed to Checkout</a>
+        <a class="btn btn-secondary btn-full" href="shop.html">Continue Shopping</a>
+      </aside>
+    </div>
+  </section>
+</main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="store.html">Durban Store</a></li>
+          <li><a href="shop.html">Fragrance Catalogue</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="enquiry.html">Product Enquiry</a></li>
+          <li><a href="support.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Shopping</h4>
+        <ul>
+          <li><a href="cart.html">Your Cart</a></li>
+          <li><a href="store.html">Collection Information</a></li>
+          <li><a href="support.html#shipping">Shipping Information</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a>
+          <a href="https://www.tiktok.com/" rel="noopener noreferrer" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; <span id="copyright-year">2026</span> The Perfume Shop. Fragrance beyond ordinary.</p></div>
+  </footer>
+  <script src="javascript/products.js" defer></script>
+  <script src="javascript/script.js" defer></script>
+</body>
+</html>
